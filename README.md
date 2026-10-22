@@ -17,3 +17,5 @@ The training manifest has explicit ID, start URL and scope /berias-training/. Th
 
 ## Development and publishing
 App sources are in dist/ with no build dependencies. Run npm test (Node 22+) and npm start for a local preview. GitHub Actions runs tests and publishes dist/ from main to GitHub Pages. Workflow permissions and the github-pages environment apply only to this repository. No personal training logs are included.
+
+Initial GitHub setup: Repository Settings > Pages > Source > GitHub Actions. The workflow publishes an already-enabled Pages site and does not attempt to change repository administration settings.
