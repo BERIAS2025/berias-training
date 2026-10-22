@@ -1,0 +1,10 @@
+{
+  "name": "berias-training",
+  "private": true,
+  "type": "module",
+  "version": "2.2.0",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "start": "node server.mjs"
+  }
+}

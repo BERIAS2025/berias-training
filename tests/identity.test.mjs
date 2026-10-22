@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+const read=f=>fs.readFileSync(new URL('../dist/'+f,import.meta.url),'utf8');
+test('training has a distinct installed identity and its own launch scope',()=>{const origin='https://berias2025.github.io';for(const file of ['manifest.json','manifest.webmanifest']){const m=JSON.parse(read(file));assert.equal(new URL(m.id,origin).pathname,'/berias-training/');assert.notEqual(new URL(m.id,origin).href,new URL('./',origin).href);assert.equal(m.scope,'/berias-training/');assert.equal(m.start_url,'/berias-training/');}assert(read('sw.js').includes("k.startsWith('berias-training-')"));});
